@@ -61,7 +61,7 @@ This command will output something like:
 ![Screen Shot 2022-05-07 at 11.53.53 AM.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1651938877710/up_POIEfL.png align="left")
 
 In this case, you can see that I ran the command in a folder called `tutorial` and that, now, there's a new folder called `myawesomecontract` inside it.
-The CLI also output a set of commands that we can run to check if the contract was correctly generated and that it compiles and actually runs. Let's run these commands:
+The CLI also outputs a set of commands that we can run to check if the contract was correctly generated and that it compiles and actually runs. Let's run these commands:
 
 ```bash
 cd /Users/rr/Documents/blockchain/tutorial/myawesomecontract && yarn install && yarn build:debug && yarn test
@@ -71,7 +71,7 @@ What do these commands actually do?
 
 - `cd /Users/rr/Documents/blockchain/tutorial/myawesomecontract`: this just changes the current directory to the smart contract directory, `myawesomecontract` here
 - `yarn install`: this installs all the dependencies that we need in order to compile and test a Koinos smart contract
-- `yarn build:debug`: this compiles the smart contract into WASM (the debug version of the wasm file to be precice)
+- `yarn build:debug`: this compiles the smart contract into WASM (the debug version of the wasm file to be precise)
 - `yarn test`: this runs the unit tests of the smart contract
 
 If all goes well, you should see something like that in your terminal, which means that your contract was successfully compiled and tested:
