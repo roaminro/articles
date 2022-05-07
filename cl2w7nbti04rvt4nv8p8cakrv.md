@@ -94,14 +94,14 @@ The content of this folder should be similar to this:
 
 ![Screen Shot 2022-05-07 at 12.18.13 PM.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1651940317042/mJaPIqfbq.png align="left")
 
-Today we will mainly focus on the `assembly` folder, simply because it's basically where all your smart contract related code live.
+Today we will mainly focus on the `assembly` folder, simply because it's basically where all your smart contract related code lives.
 
 #### `assembly` folder:
 
 ![Screen Shot 2022-05-07 at 12.20.35 PM.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1651940445028/6NL66XoyJ.png align="left")
 
 
-- the `__tests__` folder,  as its name suggests, is where you'll be creating the unit tests of your contract
+- the `__tests__` folder,  as its name suggests, is where you'll be creating the unit tests for your contract
 - the `proto` folder is where your `proto` files live, we'll talk about what is a `proto` file in a few minutes
 - `index.ts` file is the entry point of your contract, that's the file that will be called by the Koinos blockchain/VM when interacting with your contract
 - `Myawesomecontract.boilerplate.ts` is basically the code that the CLI auto generates based on your `proto` file description (I know, you still probably don't know what a proto file is 😂)
@@ -145,8 +145,8 @@ message hello_result {
 ```
 I'm only going to focus on the important parts of this file:
 - `package myawesomecontract;` this is the package name to which this proto file belongs to, in this case, it's just the name of the smart contract
-- `message hello_arguments` is actually divided in 3 parts:
-    - `message` this indicates that we're creating a new proto message
+- `message hello_arguments` is actually divided into 3 parts:
+    - `message` this indicates that we're declarin a new proto message
     - `hello` is the name of the smart contract function this message describes
     - `arguments` means that this message describes the arguments of the function, in our case, the `hello` function
 - `message hello_result` as you can guess is the message that describes the `result` of the function `hello`
@@ -156,7 +156,7 @@ On top of that, each `arguments message` must come with 2 `comments`:
 - `@description` which is used to describe what the function does
 - `@read-only` which is used to indicate if the function is read only or not, in other words, does your function needs to write onto the blockchain state or not
 
-inside the `hello_arguments`, you can see `string name = 1;` this basically means that our `hello_arguments` message has one property called `name` and that it's a string.
+Inside the `hello_arguments`, you can see `string name = 1;` this basically means that our `hello_arguments` message has one property called `name` and that it's a string.
 
 To summarize, in this proto file we are describing a `hello` function that takes a `string` called `name` as argument and returns a `string` called value as result. Easy, no?
 
@@ -169,7 +169,7 @@ koinos-sdk-as-cli build-all debug myawesomecontract.proto
 ```
 This command will re/generate the `myawesomecontract.ts` file, the `index.ts` file as well as the `Myawesomecontract.boilerplate.ts` file. 
 
-Let's actually have a look at the generated `Myawesomecontract.boilerplate.ts` file, for simplicity, I'll directly add comments to the code to explain each part:
+Let's actually have a look at the generated `Myawesomecontract.boilerplate.ts` file, for simplicity, I'll directly add comments to the code to explain each parts:
 
 ```typescript
 // import of the different helpers available in the Koinos AS SDK
@@ -283,7 +283,7 @@ message add_arguments {
 }
 
 message add_result {
-  // "add" return a result that has a property called "value" 
+  // "add" returns a result that has a property called "value" 
   // "value" is of type "uint64"
   uint64 value = 1;
 }
@@ -300,7 +300,7 @@ This will generate the new boilerplate files, you'll also get the following erro
 
 ![Screen Shot 2022-05-07 at 2.13.41 PM.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1651947251390/NeI6L-OCL.png align="left")
 
-To remedy to this problem, let's open the `Myawesomecontract.boilerplate.ts` file and copy the following auto-generated code:
+To remedy this problem, let's open the `Myawesomecontract.boilerplate.ts` file and copy the following auto-generated code:
 
 ```typescript
 add(args: myawesomecontract.add_arguments): myawesomecontract.add_result {
@@ -365,6 +365,6 @@ And, here you have it, you just added a new function to you contract and you als
 
 You made it! 🥳🥳🥳
 
-We just saw how to setup a smart contract development environment for Koinos, we also saw how to generate a smart contract and how to add functionality to it. We've done all of this locally, on your machine, without even connecting to any blockchain, without even having to create any account! 🤯
+We just saw how to setup a smart contract development environment for Koinos, we also saw how to generate a smart contract and how to add functionality to it. We've done all of this locally, on our machine, without even connecting to any blockchain, without even having to create any account! 🤯
 
 In the next article we'll see how to upload our smart contract to `Harbinger` which is the Koinos testnet!
