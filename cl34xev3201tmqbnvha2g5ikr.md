@@ -139,7 +139,9 @@ Mana cost: 0.38643078 (Disk: 16472, Network: 17562, Compute: 177948)
 Very important note here, the wallet/address you use to upload a contract will be the address of the contract itslef. This means that the address`14JP7iJP1CtGvGhgczMwBE7i9igsKvNdK4` is the address of the wallet we created earlier, but it's also the address of our contract now. Smart contracts are just users in Koinos.
 Also, right now, the block size limit on the Koinos blockchain is set to `200kb` which means that your contract's WASM files cannot exceed this size. (if it does, you'll probably have to rething the architecture of your contract by splitting the logic into several smaller contracts)
 
-Let's check our transaction on a blockchain explorer, we'll use "Koino Explorer", created by [@ederaleng_coc](https://twitter.com/ederaleng_coc).
+As you can see, the upload cost us `0.38643078 Mana`, which means we didn't spend any actual `tKoin`, which also means that we basically uploaded the contract for free!!!! (since Mana is a property of `tKoin` that regenerates overtime)
+
+Let's now check our transaction on a blockchain explorer, we'll use "Koino Explorer", created by [@ederaleng_coc](https://twitter.com/ederaleng_coc).
 Let's head over to: 
 https://v3.koinosexplorer.com/tx/0x122096042fb2e2c085eb4e78cb80a4933e6cda21ebf65722e2c0f283f39a9ba40f2a
 
@@ -203,3 +205,4 @@ By default, smart contracts are upgradeable on Koinos! To do so, it's super simp
 
 ## Summary
 Alright, so we just saw how to upload a smart contract to the Koinos blockchain, the first 2 steps only need to be done once. Once your wallet is setup with some `tKoin` on it, you can iterate your development super quickly by simply using the `upload` command of the CLI. As you can see, you can start creating and interacting with a smart contract in literally just minutes! You don't need to build any frontend or you don't need to create additional scripts, the Koinos CLI is all you need!
+One last thing, as you saw, to upload our smart contract, we only had to use our Mana, which means that we didn't have to spend any money to upload it, FREE SMART CONTRACTS 🤯🤯🤯
