@@ -16,9 +16,9 @@ You read that right! AS is just like TypeScript, but instead of compiling to Jav
 
 When I started working on this project I didn't know that AS was one of the best WASM programming languages there is. The Koinos team itself ran some benchmarks and compared the AS SDK to the C++ SDK. While in terms of computing performances, both SDKs produce very similar bytecode, AS excels in generating small-size WASM files, which in a blockchain environment, is a MUST-HAVE.
 
-A couple of weeks ago, the Koinos team decided to make the AS SDK a "first-party software" and my work was moved to the [official Koinos github repo](https://github.com/koinos/koinos-sdk-as)!
+A couple of weeks ago, the Koinos team decided to make the AS SDK a "first-party software" and my work was moved to the [official Koinos GitHub repo!](https://github.com/koinos/koinos-sdk-as)
 
-%\[https://twitter.com/koinosnetwork/status/1517614514644082690\] %\[https://github.com/koinos/koinos-sdk-as\]
+%[https://twitter.com/koinosnetwork/status/1517614514644082690]
 
 ## Create your first Koinos smart contract in minutes (if not seconds 😎)
 
