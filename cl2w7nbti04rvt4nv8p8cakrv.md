@@ -18,7 +18,7 @@ When I started working on this project I didn't know that AS was one of the best
 
 A couple of weeks ago, the Koinos team decided to make the AS SDK a "first-party software" and my work was moved to the [official Koinos GitHub repo!](https://github.com/koinos/koinos-sdk-as)
 
-%[https://twitter.com/koinosnetwork/status/1517614514644082690]
+%[https://twitter.com/koinosnetwork/status/1517614514644082690] 
 
 ## Create your first Koinos smart contract in minutes (if not seconds 😎)
 
@@ -188,7 +188,7 @@ You can learn more about Protobuf directly on [Google's Protobuf website](https:
 When you're done creating your proto file or when you update it, you need to compile it so that the new AS files get generated, to do so you can use the CLI:
 
 ```bash
-koinos-sdk-as-cli build-all debug myawesomecontract.proto
+koinos-sdk-as-cli build-all debug 0 myawesomecontract.proto
 ```
 
 This command will re/generate the `myawesomecontract.ts` file, the `index.ts` file as well as the `Myawesomecontract.boilerplate.ts` file.
@@ -315,7 +315,7 @@ message add_result {
 Run the command:
 
 ```bash
-koinos-sdk-as-cli build-all debug myawesomecontract.proto
+koinos-sdk-as-cli build-all debug 0 myawesomecontract.proto
 ```
 
 This will generate the new boilerplate files, you'll also get the following error, that's because we haven't added the function `add` to our contract yet:
