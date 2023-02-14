@@ -33,7 +33,7 @@ There are several ways to go about it depending on which package manager you're 
 The SDK CLI is just an npm package, so to install it, you just need to run this command:
 
 ```bash
-yarn global add @roamin/koinos-sdk-as-cli
+yarn global add @roamin/sdk-as-cli
 ```
 
 That's it, you just installed the SDK CLI globally on your computer, which means you can now call the CLI from your terminal. Let's try it to see if it was installed properly:
